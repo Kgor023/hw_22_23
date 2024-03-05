@@ -1,0 +1,169 @@
+body {
+  background-color: rgb(45, 45, 45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calc {
+  height: 450px;
+  width: 320px;
+  margin-top: 110px;
+  display: grid;
+  grid-template: repeat(6, 1fr) / repeat(4, 1fr);
+  gap: 10px;
+  border: 2px solid black;
+  padding: 30px;
+  background-color: azure;
+  box-shadow: 0px 0px 20px 2px white;
+  border-radius: 15px;
+}
+#text {
+  grid-area: 1/1/2/4;
+  padding-right: 15px;
+  text-align: right;
+  color: black;
+}
+#deleate {
+  grid-area: 1/4/2/5;
+  background-color: rgba(255, 0, 0, 0.855);
+}
+#black_deleate {
+  display: inline-block;
+  padding-top: 5px;
+  height: 40px;
+  width: 40px;
+}
+#white_deleate {
+  display: none;
+  height: 40px;
+  padding-left: 9px;
+  padding-top: 0px;
+  width: 40px;
+}
+#deleate:hover #white_deleate {
+display: block;
+}
+#deleate:hover #black_deleate {
+  display: none;
+  }
+#deleate:hover {
+  background-color: brown;
+}
+#deleate:active {
+  background-color: rgba(255, 0, 0, 0.855);
+}
+#seven {
+  grid-area: 2/1/3/2;
+}
+#eight {
+  grid-area: 2/2/3/3;
+}
+#nine {
+  grid-area: 2/3/3/4;
+}
+#multiply {
+  grid-area: 2/4/3/5;
+}
+#four {
+  grid-area: 3/1/4/2;
+}
+#five {
+  grid-area: 3/2/4/3;
+}
+#six {
+  grid-area: 3/3/4/4;
+}
+#divide {
+  grid-area: 3/4/4/5;
+}
+#one {
+  grid-area: 4/1/5/2;
+}
+#two {
+  grid-area: 4/2/5/3;
+}
+#three {
+  grid-area: 4/3/5/4;
+}
+#sum {
+  grid-area: 4/4/5/5;
+}
+
+#point {
+  grid-area: 5/1/6/2;
+}
+
+#zero {
+  grid-area: 5/2/6/3;
+}
+
+#history {
+  grid-area: 5/3/6/4;
+}
+
+#diff {
+  grid-area: 5/4/6/5;
+}
+#cancel {
+  grid-area: 6/1/7/3;
+  background-color: rgba(255, 0, 0, 0.855);
+}
+#cancel:hover {
+  background-color: brown;
+}
+#cancel:active {
+  background-color: rgba(255, 0, 0, 0.855);
+}
+#result {
+  grid-area: 6/3/7/5;
+}
+:is(#multiply, #divide, #sum, #diff, #result) {
+  background-color: rgb(193, 192, 192);
+}
+:is(#multiply, #divide, #sum, #diff, #result):hover {
+  background-color: rgb(125, 125, 125);
+}
+:is(#multiply, #divide, #sum, #diff, #result):active {
+  background-color: rgb(61, 61, 61);
+  transition-duration: 0s;
+}
+button,
+input {
+  border: 2px solid black;
+  border-radius: 20px;
+  font-size: 28px;
+  font-weight: 400;
+  background-color: rgba(225, 225, 225, 0.634);
+}
+button:hover {
+  transition: 0.4s;
+  background-color: rgb(151, 150, 150);
+  color: rgb(255, 255, 255);
+}
+button:active {
+  background-color: rgb(61, 61, 61);
+  transition-duration: 0s;
+}
+
+.history{
+    display: none;
+    height: 400px;
+    width: 300px;
+    margin-top: 110px;
+    margin-left:30px;
+    border: 1px solid black;
+    padding: 30px;
+    background-color: azure;
+    align-self: flex-start;
+    font-size: 23px;
+    font-weight: 500;;
+    overflow-y: scroll;
+    scrollbar-width: 1px;
+    border: 10px solid azure;
+}
+h3{
+    margin: 0;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+}
